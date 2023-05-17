@@ -1,0 +1,137 @@
+$light: #eee;
+$secondary: #1aac83;
+$secondary-hover: #14936f;
+
+body {
+    font-family: "Roboto";
+}
+
+::-webkit-scrollbar {
+    width: 10px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+    background: #f1f1f1;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+    background: #888;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+    background: $secondary;
+}
+
+.fw-500 {
+    font-weight: 500
+}
+
+.fs-1rem {
+    font-size: 1.125rem !important;
+}
+
+
+@import 'node_modules/bootstrap/scss/bootstrap';
+
+.input:focus,
+.select:focus {
+    border-color: $secondary;
+    box-shadow: 0 0 0 1px $secondary;
+}
+
+.btn {
+    border-color: $secondary-hover !important;
+}
+
+.btn:hover,
+.btn:focus {
+    background-color: $secondary-hover !important;
+    box-shadow: 0 0 0 1px $secondary;
+}
+
+.animate-me {
+    animation: shake 0.2s ease-in-out 1 forwards;
+}
+
+@keyframes shake {
+    0% {
+        transform: translateX(0px);
+    }
+
+    50% {
+        transform: translateX(50px);
+    }
+
+    100% {
+        transform: translateX(0px);
+    }
+}
+
+// LOADER
+.pulsing-1 {
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    background: $secondary;
+    box-shadow: 0 0 0 0 #0004;
+    animation: pl1 1s infinite;
+}
+
+@keyframes pl1 {
+    100% {
+        box-shadow: 0 0 0 30px #0000
+    }
+}
+
+// ACCORDION
+.accordion-button {
+    background-color: inherit !important;
+    color: $secondary !important;
+    font-weight: 500;
+}
+
+.accordion-button:focus {
+    box-shadow: none;
+    color: $secondary;
+}
+
+.accordion-button:not(.collapsed)::after {
+    background-image: var(--bs-accordion-btn-icon) !important;
+}
+
+.accordion-button:not(.collapsed) {
+    box-shadow: inset 0 calc(-1 * var(--bs-accordion-border-width)) 0 var(--bs-accordion-border-color) !important;
+}
+
+// WORKOUT CARD
+.fa-pen,
+.fa-trash {
+    font-size: 14px;
+}
+
+// SPINNER
+.fa-solid.fa-spinner {
+    animation: rotateLoader 1s linear infinite;
+    font-size: 16px;
+}
+
+@keyframes rotateLoader {
+    0% {
+        transform: rotate(0deg);
+    }
+
+    40% {
+        transform: rotate(100deg);
+    }
+
+    65% {
+        transform: rotate(200deg);
+    }
+
+    100% {
+        transform: rotate(360deg);
+    }
+}
